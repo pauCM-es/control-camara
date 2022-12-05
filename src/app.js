@@ -46,8 +46,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 
-
-connect(MONGODB_URI, OPTIONS)
+// cambiar el string del localhost por la variable MONGODB_URI para conectar con mongoATLAS
+connect('mongodb://localhost:27017/controlCamara', OPTIONS)
     // si algo sale mal mostramos el error
     .then(() => {
         console.log("MONGO CONECTION OPEN!!!")
@@ -62,5 +62,4 @@ connect(MONGODB_URI, OPTIONS)
 app.listen(PORT, () => {
     console.log('Connected to PORT', PORT);
 });
-
 
